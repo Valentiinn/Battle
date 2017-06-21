@@ -1,4 +1,5 @@
-#pragma once
+#ifndef PLAYER_H
+#define PLAYER_H
 
 #include <vector>
 
@@ -11,10 +12,11 @@ class Player
 {
 public:
 	Player(const string& name);
+	Player();
 	void setName(const string& name);
-	string getName();
-	int getAliveShipCount();
-	void makeShot(int x, int y);
+	string getName()const;
+	int getAliveShipCount()const;
+	virtual void takeShot(char xCoordinate, int yCoordinate);
 	~Player();
 private:
 	string name_;
@@ -22,3 +24,5 @@ private:
 	int aliveShipsCount_;
 };
 
+
+#endif //PLAYER_H

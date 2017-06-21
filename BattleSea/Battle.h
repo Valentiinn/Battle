@@ -1,4 +1,5 @@
-#pragma once
+#ifndef BATTLE_H
+#define BATTLE_H
 
 #include "HumanPlayer.h"
 #include "AI.h"
@@ -12,10 +13,15 @@ public:
 	void timerStertBattle();
 	void timerMove();
 	bool isOver();
-	void start();
+	void startBattle();
+	int getBattleStepsCount();
+	void setBattleStepsCount(const int& battleStepsCount);
 	~Battle();
 private:
 	HumanPlayer humanPlayer;
 	AI aiPlayer;
+	int battleStepsCount;
 };
 
+
+#endif //BATTLE_H
