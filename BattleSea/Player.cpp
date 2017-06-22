@@ -4,7 +4,7 @@
 
 Player::Player(const string& name) : name_(name)
 {
-
+	aliveShipsCount_ = 10;
 }
 
 
@@ -18,4 +18,8 @@ string Player::getName() const {
 
 void Player::setName(const string& name) {
 	name_ = name;
+}
+
+const vector<Ship>& Player::getShip() const {
+	return ships_;
 }

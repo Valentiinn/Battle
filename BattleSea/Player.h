@@ -17,7 +17,8 @@ public:
 	string getName()const;
 	int getAliveShipCount()const;
 	virtual void takeShot(char xCoordinate, int yCoordinate);
-	~Player();
+	const vector<Ship>& getShip() const;
+	virtual ~Player();
 private:
 	string name_;
 	vector<Ship> ships_;

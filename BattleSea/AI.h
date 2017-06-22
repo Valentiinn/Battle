@@ -5,18 +5,13 @@
 class AI :public Player
 {
 public:
-	static AI * getInstance() {
-		if (instance)
-			instance = new AI();
-		return instance;
-	}
-	void takeShot(int x, int y) override;
+	static AI& getInstance() {}
+	void takeShot(char xCoordinate, int yCoordinate) override;
 private:
-	static AI * instance;
 	AI() {}
-	AI(const AI&);
-	AI& operator=(AI&);
-
+	~AI() {}
+	AI(AI const&) = delete;
+	AI& operator= (AI const&) = delete;
 };
 
 
